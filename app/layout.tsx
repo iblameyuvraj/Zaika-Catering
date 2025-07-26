@@ -3,6 +3,7 @@ import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
 import './globals.css'
 import { ThemeProvider } from "@/components/theme-provider"
+import { Toaster } from "sonner"
 
 export const metadata: Metadata = {
   title: 'Zaika Catering | Best Catering Service in Odisha',
@@ -68,6 +69,7 @@ export default function RootLayout({
       <body>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           {children}
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>

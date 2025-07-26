@@ -11,6 +11,8 @@ import {
 import { motion } from "framer-motion";
 
 export default function TypewriterEffectSmoothDemo() {
+  
+  
   const words = [
     {
       text: "Ready",
@@ -38,6 +40,7 @@ export default function TypewriterEffectSmoothDemo() {
   ];
 
   return (
+
     <div className="flex flex-col items-center justify-center h-[40rem] bg-white dark:bg-black">
       <p className="text-neutral-600 dark:text-neutral-200 text-xs sm:text-base">
         Experience the authentic flavors of Odisha
@@ -49,7 +52,7 @@ export default function TypewriterEffectSmoothDemo() {
             Book Now
           </ModalTrigger>
           <button className="w-40 h-10 rounded-xl bg-white text-black border border-black text-sm font-semibold hover:bg-black hover:text-white transition-all dark:bg-black dark:text-white dark:border-white dark:hover:bg-white dark:hover:text-black">
-            Call Us
+            <a href="tel:+917077317979">Call Us</a>
           </button>
         </div>
         <ModalBody>
@@ -86,17 +89,13 @@ export default function TypewriterEffectSmoothDemo() {
             </div>
             <form className="flex flex-col items-center" onSubmit={e => e.preventDefault()}>
               <div className="w-full flex items-center">
-                <input
-                  type="tel"
-                  id="mobile"
-                  name="mobile"
-                  pattern="[0-9]{10}"
-                  maxLength={10}
-                  required
-                  className="mb-4 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 dark:bg-neutral-900 dark:border-neutral-700 dark:text-white"
-                  placeholder="Enter your mobile number"
-                />
-                <button className="px-4 py-2 rounded-xl bg-white text-black border border-black text-sm font-semibold hover:bg-black hover:text-white transition-all dark:bg-white dark:text-black dark:border-white dark:hover:bg-black dark:hover:text-white ml-20 mb-4">Submit</button>
+
+                <a
+                  href="/contact"
+                  className="px-4 py-2 rounded-xl bg-white text-black border border-black text-sm font-semibold hover:bg-black hover:text-white transition-all dark:bg-white dark:text-black dark:border-white dark:hover:bg-black dark:hover:text-white mb-4 mx-auto block text-center"
+                >
+                  Contact Us
+                </a>
               </div>
             </form>
           </ModalContent>

@@ -201,9 +201,11 @@ export const MobileNavToggle = ({
 export const NavbarLogo = () => {
   return (
     <a href="#" className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black">
-      <div className="w-8 h-8 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center">
-        <span className="text-white font-bold text-lg">Z</span>
-      </div>
+      <img
+        src="/Untitled.jpeg"
+        alt="Zaika Catering Logo"
+        className="w-13 h-10 rounded-lg object-cover"
+      />
       <span className="font-bold text-black dark:text-white text-lg">Zaika Catering</span>
     </a>
   )

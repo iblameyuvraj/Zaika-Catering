@@ -6,53 +6,43 @@ import type { ReactNode } from "react"
 
 interface AuroraBackgroundProps extends React.HTMLProps<HTMLDivElement> {
   children: ReactNode
-  showRadialGradient?: boolean
+  videoSrc?: string
 }
 
 export const AuroraBackground = ({
   className,
   children,
-  showRadialGradient = true,
+  videoSrc = "https://videocdn.cdnpk.net/videos/03716c3f-b4a4-4df0-bcec-00425fb763d9/horizontal/previews/clear/large.mp4?token=exp=1753571699~hmac=5cfb5b61f98f4f6651d52e96799af2d6432218daa48ce0379f9de7e0cd958367",
   ...props
 }: AuroraBackgroundProps) => {
   return (
     <main>
       <div
         className={cn(
-          "transition-bg relative flex h-[100vh] flex-col items-center justify-center bg-zinc-50 text-slate-950 dark:bg-zinc-900",
+          "relative flex h-[100vh] flex-col items-center justify-center text-white overflow-hidden",
           className,
         )}
         {...props}
       >
-        <div
-          className="absolute inset-0 overflow-hidden"
-          style={
-            {
-              "--aurora":
-                "repeating-linear-gradient(100deg,#f97316_10%,#ea580c_15%,#dc2626_20%,#b91c1c_25%,#991b1b_30%)",
-              "--dark-gradient":
-                "repeating-linear-gradient(100deg,#000_0%,#000_7%,transparent_10%,transparent_12%,#000_16%)",
-              "--white-gradient":
-                "repeating-linear-gradient(100deg,#fff_0%,#fff_7%,transparent_10%,transparent_12%,#fff_16%)",
-              "--orange-500": "#f97316",
-              "--orange-600": "#ea580c",
-              "--red-600": "#dc2626",
-              "--red-700": "#b91c1c",
-              "--red-800": "#991b1b",
-              "--black": "#000",
-              "--white": "#fff",
-              "--transparent": "transparent",
-            } as React.CSSProperties
-          }
+        {/* Video Background */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
         >
-          <div
-            className={cn(
-              `after:animate-aurora pointer-events-none absolute -inset-[10px] [background-image:var(--white-gradient),var(--aurora)] [background-size:300%,_200%] [background-position:50%_50%,50%_50%] opacity-50 blur-[10px] invert filter will-change-transform [--aurora:repeating-linear-gradient(100deg,var(--orange-500)_10%,var(--orange-600)_15%,var(--red-600)_20%,var(--red-700)_25%,var(--red-800)_30%)] [--dark-gradient:repeating-linear-gradient(100deg,var(--black)_0%,var(--black)_7%,var(--transparent)_10%,var(--transparent)_12%,var(--black)_16%)] [--white-gradient:repeating-linear-gradient(100deg,var(--white)_0%,var(--white)_7%,var(--transparent)_10%,var(--transparent)_12%,var(--white)_16%)] after:absolute after:inset-0 after:[background-image:var(--white-gradient),var(--aurora)] after:[background-size:200%,_100%] after:[background-attachment:fixed] after:mix-blend-difference after:content-[""] dark:[background-image:var(--dark-gradient),var(--aurora)] dark:invert-0 after:dark:[background-image:var(--dark-gradient),var(--aurora)]`,
-              showRadialGradient && `[mask-image:radial-gradient(ellipse_at_100%_0%,black_10%,var(--transparent)_70%)]`,
-            )}
-          ></div>
+          <source src={videoSrc} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        
+        {/* Overlay for better text readability */}
+        <div className="absolute inset-0 bg-black/40"></div>
+        
+        {/* Content positioned above the overlay */}
+        <div className="relative z-10">
+          {children}
         </div>
-        {children}
       </div>
     </main>
   )

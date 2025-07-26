@@ -22,10 +22,10 @@ export default function AuroraBackgroundDemo() {
         </div>
         <div className="flex flex-col md:flex-row gap-4 mt-6">
           <button className="relative w-fit rounded-xl px-7 py-3 text-base font-semibold bg-white text-black border-2 border-black shadow transition-all duration-200 hover:bg-black hover:text-white hover:scale-105 focus:outline-none focus:ring-2 focus:ring-black/20 dark:bg-neutral-900 dark:text-white dark:border-white dark:hover:bg-white dark:hover:text-black dark:focus:ring-white/30">
-            Book Your Event
+            <a href="/contact">Book Your Event</a>
           </button>
           <button className="relative w-fit rounded-xl px-7 py-3 text-base font-semibold bg-black text-white border-2 border-black shadow transition-all duration-200 hover:bg-white hover:text-black hover:scale-105 focus:outline-none focus:ring-2 focus:ring-black/20 dark:bg-white dark:text-black dark:border-white dark:hover:bg-black dark:hover:text-white dark:focus:ring-white/30">
-            View Menu
+            <a href="/public/menu.pdf">View Menu</a>
           </button>
         </div>
       </motion.div>

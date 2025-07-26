@@ -20,7 +20,7 @@ export default function NavbarDemo() {
   const navItems = [
     {
       name: "Services",
-      link: "#services",
+      link: "/services",
     },
     {
       name: "Gallery",
@@ -32,7 +32,7 @@ export default function NavbarDemo() {
     },
     {
       name: "Contact",
-      link: "#contact",
+      link: "/contact",
     },
   ]
 
@@ -56,8 +56,8 @@ export default function NavbarDemo() {
               <Moon className="absolute h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
               <span className="sr-only">Toggle theme</span>
             </Button>
-            <NavbarButton variant="secondary">Call Now</NavbarButton>
-            <NavbarButton variant="primary">Book Event</NavbarButton>
+            <NavbarButton variant="secondary"><a href="tel:+917077317979">Call Now</a></NavbarButton>
+            <NavbarButton variant="primary"><a href="/contact">Book Event</a></NavbarButton>
           </div>
         </NavBody>
         {/* Mobile Navigation */}
@@ -86,10 +86,10 @@ export default function NavbarDemo() {
             ))}
             <div className="flex w-full flex-col gap-4">
               <NavbarButton onClick={() => setIsMobileMenuOpen(false)} variant="secondary" className="w-full">
-                Call Now
+                <a href="tel:+917077317979">Call Now</a>
               </NavbarButton>
               <NavbarButton onClick={() => setIsMobileMenuOpen(false)} variant="primary" className="w-full">
-                Book Event
+                <a href="/contact">Book Event</a>
               </NavbarButton>
             </div>
           </MobileNavMenu>
