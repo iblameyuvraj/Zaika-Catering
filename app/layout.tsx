@@ -35,6 +35,17 @@ export const metadata: Metadata = {
   authors: [{ name: 'Zaika Catering', url: 'https://zaikacaterin.in' }],
   viewport: 'width=device-width, initial-scale=1',
   metadataBase: new URL('https://zaikacaterin.in'),
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+  },
+  manifest: '/site.webmanifest',
   openGraph: {
     title: 'Zaika Catering | Best Catering Service in Odisha',
     description: 'Premium catering for weddings, parties, and events in Odisha. Book now!',
@@ -42,7 +53,7 @@ export const metadata: Metadata = {
     siteName: 'Zaika Catering',
     images: [
       {
-        url: '/public/placeholder-logo.png',
+        url: '/untitled.jpeg',
         width: 800,
         height: 600,
         alt: 'Zaika Catering Logo',
@@ -55,7 +66,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Zaika Catering | Best Catering Service in Odisha',
     description: 'Premium catering for weddings, parties, and events in Odisha. Book now!',
-    images: ['/public/placeholder-logo.png'],
+    images: ['/untitled.jpeg'],
   },
 };
 
