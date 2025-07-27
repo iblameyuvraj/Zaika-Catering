@@ -27,7 +27,7 @@ import { toast } from "sonner";
 import { Loader2 } from "lucide-react";
 
 const contactFormSchema = z.object({
-  username: z.string().min(2, "Name must be at least 2 characters"),
+  name: z.string().min(2, "Name must be at least 2 characters"),
   email: z.string().email("Please enter a valid email address"),
   serviceType: z.string().min(1, "Please select a service"),
   message: z.string().optional(),
@@ -78,7 +78,7 @@ export default function ContactPage() {
       }
 
       const templateParams = {
-        from_name: data.username,
+        from_name: data.name,
         from_email: data.email,
         service_type: data.serviceType,
         message: data.message || "No message provided.",
@@ -118,17 +118,17 @@ export default function ContactPage() {
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
               <div className="space-y-2">
                 <Label htmlFor="username" className="text-gray-200">
-                  Username
+                  Name
                 </Label>
                 <Input
                   id="username"
-                  placeholder="Enter your username"
+                  placeholder="Enter your name"
                   required
                   className="bg-gray-900 border-gray-800 text-white placeholder:text-gray-400 focus:border-gray-600"
-                  {...register("username")}
+                  {...register("name")}
                 />
-                {errors.username && (
-                  <p className="text-sm text-red-500">{errors.username.message}</p>
+                {errors.name && (
+                  <p className="text-sm text-red-500">{errors.name.message}</p>
                 )}
               </div>
 

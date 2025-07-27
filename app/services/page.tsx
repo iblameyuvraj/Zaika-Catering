@@ -190,7 +190,7 @@ export default function ServicesPage() {
                 <a href="/contact">Get Quote</a>
               </button>
               <button className="border-2 border-orange-500 dark:border-orange-400 text-orange-500 dark:text-orange-400 hover:bg-orange-500 hover:text-white dark:hover:bg-orange-600 dark:hover:text-white font-semibold py-3 px-8 rounded-xl transition-all duration-300 w-full sm:w-auto">
-                <a href="/public/menu.pdf">View Menu</a>
+                <a href="/menu">View Menu</a>
               </button>
             </div>
           </div>

@@ -25,7 +25,7 @@ export default function AuroraBackgroundDemo() {
             <a href="/contact">Book Your Event</a>
           </button>
           <button className="relative w-fit rounded-xl px-7 py-3 text-base font-semibold bg-black text-white border-2 border-black shadow transition-all duration-200 hover:bg-white hover:text-black hover:scale-105 focus:outline-none focus:ring-2 focus:ring-black/20 dark:bg-white dark:text-black dark:border-white dark:hover:bg-black dark:hover:text-white dark:focus:ring-white/30">
-            <a href="/public/menu.pdf">View Menu</a>
+            <a href="/menu">View Menu</a>
           </button>
         </div>
       </motion.div>

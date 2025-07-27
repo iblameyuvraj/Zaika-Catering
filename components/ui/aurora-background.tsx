@@ -12,7 +12,7 @@ interface AuroraBackgroundProps extends React.HTMLProps<HTMLDivElement> {
 export const AuroraBackground = ({
   className,
   children,
-  videoSrc = "https://videocdn.cdnpk.net/videos/03716c3f-b4a4-4df0-bcec-00425fb763d9/horizontal/previews/clear/large.mp4?token=exp=1753571699~hmac=5cfb5b61f98f4f6651d52e96799af2d6432218daa48ce0379f9de7e0cd958367",
+  videoSrc = "https://ssgvqaetpmjtkxtnpzki.supabase.co/storage/v1/object/public/video-bucket//6037337_Chef_Flame_3840x2160.mp4",
   ...props
 }: AuroraBackgroundProps) => {
   return (
