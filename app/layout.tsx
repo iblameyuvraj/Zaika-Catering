@@ -53,10 +53,11 @@ export const metadata: Metadata = {
     siteName: 'Zaika Catering',
     images: [
       {
-        url: '/untitled.jpeg',
-        width: 800,
-        height: 600,
-        alt: 'Zaika Catering Logo',
+        url: '/Untitled.jpeg',
+        width: 1200,
+        height: 630,
+        alt: 'Zaika Catering - Premium Catering Services in Odisha',
+        type: 'image/jpeg',
       },
     ],
     locale: 'en_IN',
@@ -66,7 +67,33 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Zaika Catering | Best Catering Service in Odisha',
     description: 'Premium catering for weddings, parties, and events in Odisha. Book now!',
-    images: ['/untitled.jpeg'],
+    images: [
+      {
+        url: '/Untitled.jpeg',
+        alt: 'Zaika Catering - Premium Catering Services in Odisha',
+        width: 1200,
+        height: 630,
+      }
+    ],
+    creator: '@zaikacatering',
+    site: '@zaikacatering',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  verification: {
+    google: 'your-google-verification-code',
+  },
+  alternates: {
+    canonical: 'https://zaikacaterin.in',
   },
 };
 
