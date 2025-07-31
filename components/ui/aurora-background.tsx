@@ -6,13 +6,17 @@ import type { ReactNode } from "react"
 
 interface AuroraBackgroundProps extends React.HTMLProps<HTMLDivElement> {
   children: ReactNode
-  videoSrc?: string
+  photoSrc?: string
+  x?: string
+  y?: string
 }
 
 export const AuroraBackground = ({
   className,
   children,
-  videoSrc = "https://ssgvqaetpmjtkxtnpzki.supabase.co/storage/v1/object/public/video-bucket//6037337_Chef_Flame_3840x2160.mp4",
+  photoSrc = "https://media.istockphoto.com/id/1334489824/photo/chicken-cutlet-with-tomato-sauce.jpg?s=612x612&w=0&k=20&c=QTqv_JAbGbAVQ68q30167qkzXkeEJe7fJqDy3hdBNNI=",
+  x = "40%",
+  y = "10%",
   ...props
 }: AuroraBackgroundProps) => {
   return (
@@ -25,7 +29,7 @@ export const AuroraBackground = ({
         {...props}
       >
         {/* Video Background */}
-        <video
+        {/* <video
           autoPlay
           loop
           muted
@@ -35,6 +39,17 @@ export const AuroraBackground = ({
           <source src={videoSrc} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
+        
+        {/* Fallback Image Background */}
+        <div 
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{
+            backgroundImage: `url(${photoSrc})`,
+            backgroundSize: 'cover',
+            backgroundPosition: `${x} ${y}`,
+            backgroundRepeat: 'no-repeat'
+          }}
+        />
         
         {/* Overlay for better text readability */}
         <div className="absolute inset-0 bg-black/40"></div>
