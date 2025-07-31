@@ -41,7 +41,26 @@ export default function TypewriterEffectSmoothDemo() {
 
   return (
 
-    <div className="flex flex-col items-center justify-center h-[40rem] bg-white dark:bg-black">
+    <div className="relative flex flex-col items-center justify-center h-[40rem] bg-white dark:bg-black">
+      {/* Food image at x = 21%, y = 80% (bottom left-ish) */}
+      <motion.div
+        className="absolute"
+        style={{
+          right: "3%",
+          bottom: "-80%",
+          // You can tweak bottom as needed for best appearance
+        }}
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8, delay: 0.5 }}
+      >
+        <img
+          src="/food.png"
+          alt="Delicious food"
+          className="w-[200px] h-[200px] md:w-[200px] md:h-[200px] object-cover rounded-lg shadow-lg"
+        />
+      </motion.div>
+      
       <p className="text-neutral-600 dark:text-neutral-200 text-xs sm:text-base">
         Experience the authentic flavors of Odisha
       </p>
@@ -98,6 +117,8 @@ export default function TypewriterEffectSmoothDemo() {
                 </a>
               </div>
             </form>
+
+            
           </ModalContent>
         </ModalBody>
       </Modal>
