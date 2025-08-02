@@ -202,7 +202,7 @@ export const NavbarLogo = () => {
   return (
     <a href="#" className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black">
       <img
-        src="/Untitled.jpeg"
+        src="/logo/logo.jpeg"
         alt="Zaika Catering Logo"
         className="w-13 h-10 rounded-lg object-cover"
       />

@@ -1,0 +1,62 @@
+{
+  "birthday": {
+    "id": "birthday-events",
+    "name": "Birthday Events",
+    "description": "Celebrate your special day with our birthday catering",
+    "image": "/menu/birthday/platinum-menu/platinum-menu1.jpeg",
+    "services": [
+      {
+        "id": "birthday-gold",
+        "name": "Gold Package",
+        "image": "/menu/birthday/gold-menu/gold-menu.jpeg",
+        "endingImage": "/menu/birthday/gold-menu/gold-menu1.jpeg",
+        "downloadUrl": "/menu/birthday/gold-menu/gold-menu.jpeg",
+        "whatsappMessage": "Hi, I want more info about the Birthday Gold Package."
+      },
+      {
+        "id": "birthday-platinum",
+        "name": "Platinum Package",
+        "image": "/menu/birthday/platinum-menu/platinum-menu1.jpeg",
+        "endingImage": "/menu/birthday/platinum-menu/platinum-menu2.jpeg",
+        "downloadUrl": "/menu/birthday/platinum-menu/platinum-menu1.jpeg",
+        "whatsappMessage": "Hi, I want more info about the Birthday Platinum Package."
+      },
+      {
+        "id": "birthday-silver",
+        "name": "Silver Package",
+        "image": "/menu/birthday/silver-menu/silver-menu.jpeg",
+        "downloadUrl": "/menu/birthday/silver-menu/silver-menu.jpeg",
+        "whatsappMessage": "Hi, I want more info about the Birthday Silver Package."
+      },
+      {
+        "id": "birthday-aura-anna",
+        "name": "Aura Anna",
+        "image": "/menu/birthday/aura-anna/aura-anna1.jpeg",
+        "endingImage": "/menu/birthday/aura-anna/aura-anna2.jpeg",
+        "downloadUrl": "/menu/birthday/aura-anna/aura-anna1.jpeg",
+        "whatsappMessage": "Hi, I want more info about the Birthday Aura Anna menu."
+      },
+      {
+        "id": "birthday-without-onion-garlic",
+        "name": "Without Onion and Garlic",
+        "image": "/placeholder.svg?height=400&width=600",
+        "downloadUrl": "#",
+        "whatsappMessage": "Hi, I want more info about the Birthday Without Onion and Garlic menu."
+      },
+      {
+        "id": "birthday-zaika-special",
+        "name": "Zaika Catering Special Menu",
+        "image": "/placeholder.svg?height=400&width=600",
+        "downloadUrl": "#",
+        "whatsappMessage": "Hi, I want more info about the Birthday Zaika Catering Special Menu."
+      },
+      {
+        "id": "birthday-typical-odia",
+        "name": "Typical Odia Menu",
+        "image": "/placeholder.svg?height=400&width=600",
+        "downloadUrl": "#",
+        "whatsappMessage": "Hi, I want more info about the Birthday Typical Odia Menu."
+      }
+    ]
+  }
+} 

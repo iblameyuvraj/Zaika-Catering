@@ -1,0 +1,71 @@
+{
+  "wedding": {
+    "id": "wedding",
+    "name": "Wedding",
+    "description": "Complete wedding catering services for your special day",
+    "image": "https://img.freepik.com/premium-photo/kachila-bhat-served-traditional-indian-wedding-with-elaborate-daccor_636537-472821.jpg",
+    "services": [
+      {
+        "id": "wedding-gold",
+        "name": "Gold Package",
+        "image": "/menu/Wedding-menu/gold-wedding/gold-wedding1.jpeg",
+        "endingImage": "/menu/Wedding-menu/gold-wedding/gold-wedding2.jpeg",
+        "downloadUrl": "/menu/Wedding-menu/gold-wedding/gold-wedding1.jpeg",
+        "whatsappMessage": "Hi, I want more info about the Wedding Gold Package."
+      },
+      {
+        "id": "wedding-platinum",
+        "name": "Platinum Package",
+        "image": "/menu/Wedding-menu/platinum-wedding/platinum-wedding1.jpeg",
+        "endingImage": "/menu/Wedding-menu/platinum-wedding/platinum-wedding2.jpeg",
+        "downloadUrl": "/menu/Wedding-menu/platinum-wedding/platinum-wedding1.jpeg",
+        "whatsappMessage": "Hi, I want more info about the Wedding Platinum Package."
+      },
+      {
+        "id": "wedding-silver",
+        "name": "Silver Package",
+        "image": "/menu/Wedding-menu/silver-wedding/silver-menu-1.jpeg",
+        "endingImage": "/menu/Wedding-menu/silver-wedding/silver-menu2.jpeg",
+        "downloadUrl": "/menu/Wedding-menu/silver-wedding/silver-menu-1.jpeg",
+        "whatsappMessage": "Hi, I want more info about the Wedding Silver Package."
+      },
+      {
+        "id": "ring-ceremony",
+        "name": "Ring Ceremony",
+        "image": "/menu/Wedding-menu/ring-ceremony/ring-ceremony1.jpeg",
+        "endingImage": "/menu/Wedding-menu/ring-ceremony/ringceremony2.jpeg",
+        "downloadUrl": "/menu/Wedding-menu/ring-ceremony/ring-ceremony1.jpeg",
+        "whatsappMessage": "Hi, I want more info about the Ring Ceremony menu."
+      },
+      {
+        "id": "wedding-aura-anna",
+        "name": "Aura Anna",
+        "image": "/menu/Wedding-menu/aura-anna/aura-anna1.jpeg",
+        "endingImage": "/menu/Wedding-menu/aura-anna/aura-anna2.jpeg",
+        "downloadUrl": "/menu/Wedding-menu/aura-anna/aura-anna1.jpeg",
+        "whatsappMessage": "Hi, I want more info about the Wedding Aura Anna menu."
+      },
+      {
+        "id": "wedding-without-onion-garlic",
+        "name": "Without Onion and Garlic",
+        "image": "/placeholder.svg?height=400&width=600",
+        "downloadUrl": "#",
+        "whatsappMessage": "Hi, I want more info about the Wedding Without Onion and Garlic menu."
+      },
+      {
+        "id": "wedding-zaika-special",
+        "name": "Zaika Catering Special Menu",
+        "image": "/placeholder.svg?height=400&width=600",
+        "downloadUrl": "#",
+        "whatsappMessage": "Hi, I want more info about the Wedding Zaika Catering Special Menu."
+      },
+      {
+        "id": "wedding-typical-odia",
+        "name": "Typical Odia Menu",
+        "image": "/placeholder.svg?height=400&width=600",
+        "downloadUrl": "#",
+        "whatsappMessage": "Hi, I want more info about the Wedding Typical Odia Menu."
+      }
+    ]
+  }
+} 

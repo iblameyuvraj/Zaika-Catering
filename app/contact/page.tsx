@@ -29,6 +29,7 @@ import { Loader2 } from "lucide-react";
 const contactFormSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
   email: z.string().email("Please enter a valid email address"),
+  mobile: z.string().min(10, "Please enter a valid mobile number"),
   serviceType: z.string().min(1, "Please select a service"),
   message: z.string().optional(),
 });
@@ -80,6 +81,7 @@ export default function ContactPage() {
       const templateParams = {
         from_name: data.name,
         from_email: data.email,
+        from_mobile: data.mobile,
         service_type: data.serviceType,
         message: data.message || "No message provided.",
         to_name: "Zaika Catering",
@@ -146,6 +148,23 @@ export default function ContactPage() {
                 />
                 {errors.email && (
                   <p className="text-sm text-red-500">{errors.email.message}</p>
+                )}
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="mobile" className="text-gray-200">
+                  Mobile Number
+                </Label>
+                <Input
+                  id="mobile"
+                  type="tel"
+                  placeholder="Enter your mobile number"
+                  required
+                  className="bg-gray-900 border-gray-800 text-white placeholder:text-gray-400 focus:border-gray-600"
+                  {...register("mobile")}
+                />
+                {errors.mobile && (
+                  <p className="text-sm text-red-500">{errors.mobile.message}</p>
                 )}
               </div>
 

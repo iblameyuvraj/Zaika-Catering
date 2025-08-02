@@ -32,11 +32,11 @@ export default function TypewriterEffectSmoothDemo() {
     },
   ];
   const images = [
-    "/photo6.jpg",
-    "/photo8.jpg",
-    "/photo9.avif",
-    "/photo3.jpg",
-    "/photo1.jpg",
+    "/TypewiterModalPics/photo6.jpg",
+    "/TypewiterModalPics/photo8.jpg",
+    "/TypewiterModalPics/photo9.avif",
+    "/TypewiterModalPics/photo3.jpg",
+    "/TypewiterModalPics/photo1.jpg",
   ];
 
   return (
@@ -55,7 +55,7 @@ export default function TypewriterEffectSmoothDemo() {
         transition={{ duration: 0.8, delay: 0.5 }}
       >
         <img
-          src="/food.png"
+          src="/footerSVG/food.png"
           alt="Delicious food"
           className="w-[200px] h-[200px] md:w-[200px] md:h-[200px] object-cover rounded-lg shadow-lg"
         />

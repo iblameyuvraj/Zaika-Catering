@@ -16,7 +16,7 @@ export default function Footer() {
           <div className="space-y-5">
             <div className="flex items-center space-x-3">
               <img
-                src="/Untitled.jpeg"
+                src="/logo/logo.jpeg"
                 alt="Zaika Catering Logo"
                 className="w-13 h-10 rounded-lg object-cover"
               />
@@ -73,16 +73,16 @@ export default function Footer() {
               <a href="/services" className="block text-gray-300 hover:text-white transition-colors font-medium">
                 Wedding Catering
               </a>
-              <a href="/services" className="block text-gray-300 hover:text-white transition-colors font-medium">
+              <a href="/menu" className="block text-gray-300 hover:text-white transition-colors font-medium">
                 Birthday Parties
               </a>
-              <a href="/services" className="block text-gray-300 hover:text-white transition-colors font-medium">
+              <a href="/menu" className="block text-gray-300 hover:text-white transition-colors font-medium">
                 Corporate Events
               </a>
-              <a href="/services" className="block text-gray-300 hover:text-white transition-colors font-medium">
+              <a href="/menu" className="block text-gray-300 hover:text-white transition-colors font-medium">
                 Festival Catering
               </a>
-              <a href="/services" className="block text-gray-300 hover:text-white transition-colors font-medium">
+              <a href="/menu" className="block text-gray-300 hover:text-white transition-colors font-medium">
                 Private Dining
               </a>
             </div>

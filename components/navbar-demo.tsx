@@ -20,7 +20,7 @@ export default function NavbarDemo() {
   const navItems = [
     {
       name: "Services",
-      link: "/services",
+      link: "/menu",
     },
     {
       name: "Gallery",
