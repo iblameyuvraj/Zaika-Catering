@@ -286,7 +286,7 @@ export default function MenuPage() {
     }
   }
 
-  const whatsappPhoneNumber = "1234567890" // Replace with the actual phone number
+  const whatsappPhoneNumber = "7853862989" // actual phone number
 
   return (
     <div className="container mx-auto px-4 py-8 bg-white dark:bg-black text-gray-900 dark:text-gray-100">
