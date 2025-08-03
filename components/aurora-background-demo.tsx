@@ -2,6 +2,7 @@
 
 import { motion } from "motion/react"
 import { AuroraBackground } from "@/components/ui/aurora-background"
+import { Button } from "./ui/button"
 
 export default function AuroraBackgroundDemo() {
   return (
@@ -21,12 +22,12 @@ export default function AuroraBackgroundDemo() {
           Premium catering services for your special moments
         </div>
         <div className="flex flex-col md:flex-row gap-4 mt-6">
-          <button className="relative w-fit rounded-xl px-7 py-3 text-base font-semibold bg-white text-black border-2 border-black shadow transition-all duration-200 hover:bg-black hover:text-white hover:scale-105 focus:outline-none focus:ring-2 focus:ring-black/20 dark:bg-neutral-900 dark:text-white dark:border-white dark:hover:bg-white dark:hover:text-black dark:focus:ring-white/30">
-            <a href="/contact">Book Your Event</a>
-          </button>
-          <button className="relative w-fit rounded-xl px-7 py-3 text-base font-semibold bg-black text-white border-2 border-black shadow transition-all duration-200 hover:bg-white hover:text-black hover:scale-105 focus:outline-none focus:ring-2 focus:ring-black/20 dark:bg-white dark:text-black dark:border-white dark:hover:bg-black dark:hover:text-white dark:focus:ring-white/30">
-            <a href="/menu">View Menu</a>
-          </button>
+        <Button className="bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 text-gray-900 hover:bg-gradient-to-bl focus:ring-red-100 dark:focus:ring-red-400">
+        <a href="/contact">Book Your Event</a>
+      </Button>
+      <Button className="bg-gradient-to-br from-pink-500 to-orange-400 text-white hover:bg-gradient-to-bl focus:ring-pink-200 dark:focus:ring-pink-800">
+        <a href="/menu">View Menu</a>
+      </Button>
         </div>
       </motion.div>
     </AuroraBackground>
