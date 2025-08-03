@@ -4,6 +4,7 @@ import { GeistMono } from 'geist/font/mono'
 import './globals.css'
 import { ThemeProvider } from "@/components/theme-provider"
 import { Toaster } from "sonner"
+import { Analytics } from "@vercel/analytics/react"
 
 export const viewport = {
   width: 'device-width',
@@ -212,6 +213,7 @@ export default function RootLayout({
         {/* DNS Prefetch for performance */}
         <link rel="dns-prefetch" href="//www.google-analytics.com" />
         <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+        <Analytics />
       </head>
       <body className={`${GeistSans.className} antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
