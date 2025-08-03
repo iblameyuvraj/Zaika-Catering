@@ -213,12 +213,13 @@ export default function RootLayout({
         {/* DNS Prefetch for performance */}
         <link rel="dns-prefetch" href="//www.google-analytics.com" />
         <link rel="dns-prefetch" href="//www.googletagmanager.com" />
-        <Analytics />
+        
       </head>
       <body className={`${GeistSans.className} antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           {children}
           <Toaster />
+          <Analytics />
         </ThemeProvider>
         
         {/* Google Analytics Script - Add your GA4 ID */}
