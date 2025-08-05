@@ -1,0 +1,49 @@
+{
+  "family": {
+    "id": "family-events",
+    "name": "Family Events",
+    "description": "Perfect catering for family gatherings and celebrations",
+    "image": "/menu/menu-front-pic/family.avif",
+    "services": [
+      {
+        "id": "family-small-party",
+        "name": "Small Party Menu",
+        "image": "/menu/family/small-party/samll-party.jpeg",
+        "downloadUrl": "/menu/family/small-party/",
+        "whatsappMessage": "Hi, I want more info about the Family Events Small Party Menu."
+      },
+      {
+        "id": "family-aura-anna",
+        "name": "Aura Anna",
+        "image": "/menu/family/aura-anna/aura-anna1.jpeg",
+        "endingImage": "/menu/family/aura-anna/aura-anna2.jpeg",
+        "downloadUrl": "/menu/family/aura-anna/",
+        "whatsappMessage": "Hi, I want more info about the Family Events Aura Anna menu."
+      },
+      {
+        "id": "family-without-onion-garlic",
+        "name": "Without Onion and Garlic",
+        "image": "/menu/family/without-onion-garlic/without onion and garlic1.jpeg",
+        "endingImage": "/menu/family/without-onion-garlic/without onion and garlic2.jpeg",
+        "downloadUrl": "/menu/family/without-onion-garlic/",
+        "whatsappMessage": "Hi, I want more info about the Family Events Without Onion and Garlic menu."
+      },
+      {
+        "id": "family-zaika-special",
+        "name": "Zaika Catering Special Menu",
+        "image": "/menu/family/zaika-special-menu/zaika special1.jpeg",
+        "endingImage": "/menu/family/zaika-special-menu/zaika special2.jpeg",
+        "downloadUrl": "/menu/family/zaika-special-menu/",
+        "whatsappMessage": "Hi, I want more info about the Family Events Zaika Catering Special Menu."
+      },
+      {
+        "id": "family-typical-odia",
+        "name": "Typical Odia Menu",
+        "image": "/menu/family/typical-odia/typical odia1.jpeg",
+        "endingImage": "/menu/family/typical-odia/typical odia2.jpeg",
+        "downloadUrl": "/menu/family/typical-odia/",
+        "whatsappMessage": "Hi, I want more info about the Family Events Typical Odia Menu."
+      }
+    ]
+  }
+} 

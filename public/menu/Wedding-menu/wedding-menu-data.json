@@ -10,7 +10,7 @@
         "name": "Gold Package",
         "image": "/menu/Wedding-menu/gold-wedding/gold-wedding1.jpeg",
         "endingImage": "/menu/Wedding-menu/gold-wedding/gold-wedding2.jpeg",
-        "downloadUrl": "/menu/Wedding-menu/gold-wedding/gold-wedding1.jpeg",
+        "downloadUrl": "/menu/Wedding-menu/gold-wedding/",
         "whatsappMessage": "Hi, I want more info about the Wedding Gold Package."
       },
       {
@@ -18,7 +18,7 @@
         "name": "Platinum Package",
         "image": "/menu/Wedding-menu/platinum-wedding/platinum-wedding1.jpeg",
         "endingImage": "/menu/Wedding-menu/platinum-wedding/platinum-wedding2.jpeg",
-        "downloadUrl": "/menu/Wedding-menu/platinum-wedding/platinum-wedding1.jpeg",
+        "downloadUrl": "/menu/Wedding-menu/platinum-wedding/",
         "whatsappMessage": "Hi, I want more info about the Wedding Platinum Package."
       },
       {
@@ -26,7 +26,7 @@
         "name": "Silver Package",
         "image": "/menu/Wedding-menu/silver-wedding/silver-menu-1.jpeg",
         "endingImage": "/menu/Wedding-menu/silver-wedding/silver-menu2.jpeg",
-        "downloadUrl": "/menu/Wedding-menu/silver-wedding/silver-menu-1.jpeg",
+        "downloadUrl": "/menu/Wedding-menu/silver-wedding/",
         "whatsappMessage": "Hi, I want more info about the Wedding Silver Package."
       },
       {
@@ -34,7 +34,7 @@
         "name": "Ring Ceremony",
         "image": "/menu/Wedding-menu/ring-ceremony/ring-ceremony1.jpeg",
         "endingImage": "/menu/Wedding-menu/ring-ceremony/ringceremony2.jpeg",
-        "downloadUrl": "/menu/Wedding-menu/ring-ceremony/ring-ceremony1.jpeg",
+        "downloadUrl": "/menu/Wedding-menu/ring-ceremony/",
         "whatsappMessage": "Hi, I want more info about the Ring Ceremony menu."
       },
       {
@@ -42,28 +42,31 @@
         "name": "Aura Anna",
         "image": "/menu/Wedding-menu/aura-anna/aura-anna1.jpeg",
         "endingImage": "/menu/Wedding-menu/aura-anna/aura-anna2.jpeg",
-        "downloadUrl": "/menu/Wedding-menu/aura-anna/aura-anna1.jpeg",
+        "downloadUrl": "/menu/Wedding-menu/aura-anna/",
         "whatsappMessage": "Hi, I want more info about the Wedding Aura Anna menu."
       },
       {
         "id": "wedding-without-onion-garlic",
         "name": "Without Onion and Garlic",
-        "image": "/placeholder.svg?height=400&width=600",
-        "downloadUrl": "#",
+        "image": "/menu/Wedding-menu/without-onion-garlic/without onion and garlic1.jpeg",
+        "endingImage": "/menu/Wedding-menu/without-onion-garlic/without onion and garlic2.jpeg",
+        "downloadUrl": "/menu/Wedding-menu/without-onion-garlic/",
         "whatsappMessage": "Hi, I want more info about the Wedding Without Onion and Garlic menu."
       },
       {
         "id": "wedding-zaika-special",
         "name": "Zaika Catering Special Menu",
-        "image": "/placeholder.svg?height=400&width=600",
-        "downloadUrl": "#",
+        "image": "/menu/Wedding-menu/zaika-special-menu/zaika special1.jpeg",
+        "endingImage": "/menu/Wedding-menu/zaika-special-menu/zaika special2.jpeg",
+        "downloadUrl": "/menu/Wedding-menu/zaika-special-menu/",
         "whatsappMessage": "Hi, I want more info about the Wedding Zaika Catering Special Menu."
       },
       {
         "id": "wedding-typical-odia",
         "name": "Typical Odia Menu",
-        "image": "/placeholder.svg?height=400&width=600",
-        "downloadUrl": "#",
+        "image": "/menu/Wedding-menu/typical-odia/typical odia1.jpeg",
+        "endingImage": "/menu/Wedding-menu/typical-odia/typical odia2.jpeg",
+        "downloadUrl": "/menu/Wedding-menu/typical-odia/",
         "whatsappMessage": "Hi, I want more info about the Wedding Typical Odia Menu."
       }
     ]

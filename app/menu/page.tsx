@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -24,7 +24,8 @@ interface MenuCategory {
   services: ServiceType[]
 }
 
-const menuCategories: MenuCategory[] = [
+// Default menu categories as fallback
+const defaultMenuCategories: MenuCategory[] = [
   {
     id: "wedding",
     name: "Wedding",
@@ -36,7 +37,7 @@ const menuCategories: MenuCategory[] = [
         name: "Gold Package",
         image: "/menu/Wedding-menu/gold-wedding/gold-wedding1.jpeg",
         endingImage: "/menu/Wedding-menu/gold-wedding/gold-wedding2.jpeg",
-        downloadUrl: "/menu/Wedding-menu/gold-wedding/gold-wedding1.jpeg",
+        downloadUrl: "/menu/Wedding-menu/gold-wedding/",
         whatsappMessage: "Hi, I want more info about the Wedding Gold Package.",
       },
       {
@@ -44,7 +45,7 @@ const menuCategories: MenuCategory[] = [
         name: "Platinum Package",
         image: "/menu/Wedding-menu/platinum-wedding/platinum-wedding1.jpeg",
         endingImage: "/menu/Wedding-menu/platinum-wedding/platinum-wedding2.jpeg",
-        downloadUrl: "/menu/Wedding-menu/platinum-wedding/platinum-wedding1.jpeg",
+        downloadUrl: "/menu/Wedding-menu/platinum-wedding/",
         whatsappMessage: "Hi, I want more info about the Wedding Platinum Package.",
       },
       {
@@ -52,7 +53,7 @@ const menuCategories: MenuCategory[] = [
         name: "Silver Package",
         image: "/menu/Wedding-menu/silver-wedding/silver-menu-1.jpeg",
         endingImage: "/menu/Wedding-menu/silver-wedding/silver-menu2.jpeg",
-        downloadUrl: "/menu/Wedding-menu/silver-wedding/silver-menu-1.jpeg",
+        downloadUrl: "/menu/Wedding-menu/silver-wedding/",
         whatsappMessage: "Hi, I want more info about the Wedding Silver Package.",
       },
       {
@@ -60,7 +61,7 @@ const menuCategories: MenuCategory[] = [
         name: "Ring Ceremony",
         image: "/menu/Wedding-menu/ring-ceremony/ring-ceremony1.jpeg",
         endingImage: "/menu/Wedding-menu/ring-ceremony/ringceremony2.jpeg",
-        downloadUrl: "/menu/Wedding-menu/ring-ceremony/ring-ceremony1.jpeg",
+          downloadUrl: "/menu/Wedding-menu/ring-ceremony/",
         whatsappMessage: "Hi, I want more info about the Ring Ceremony menu.",
       },
       {
@@ -68,28 +69,31 @@ const menuCategories: MenuCategory[] = [
         name: "Aura Anna",
         image: "/menu/Wedding-menu/aura-anna/aura-anna1.jpeg",
         endingImage: "/menu/Wedding-menu/aura-anna/aura-anna2.jpeg",
-        downloadUrl: "/menu/Wedding-menu/aura-anna/aura-anna1.jpeg",
+        downloadUrl: "/menu/Wedding-menu/aura-anna/",
         whatsappMessage: "Hi, I want more info about the Wedding Aura Anna menu.",
       },
       {
         id: "wedding-without-onion-garlic",
         name: "Without Onion and Garlic",
-        image: "/placeholder.svg?height=400&width=600",
-        downloadUrl: "#",
+        image: "/menu/Wedding-menu/without-onion-garlic/without onion and garlic1.jpeg",
+        endingImage: "/menu/Wedding-menu/without-onion-garlic/without onion and garlic2.jpeg",
+        downloadUrl: "/menu/Wedding-menu/without-onion-garlic/",
         whatsappMessage: "Hi, I want more info about the Wedding Without Onion and Garlic menu.",
       },
       {
         id: "wedding-zaika-special",
         name: "Zaika Catering Special Menu",
-        image: "/placeholder.svg?height=400&width=600",
-        downloadUrl: "#",
+        image: "/menu/Wedding-menu/zaika-special-menu/zaika special1.jpeg",
+        endingImage: "/menu/Wedding-menu/zaika-special-menu/zaika special2.jpeg",
+        downloadUrl: "/menu/Wedding-menu/zaika-special-menu/",
         whatsappMessage: "Hi, I want more info about the Wedding Zaika Catering Special Menu.",
       },
       {
         id: "wedding-typical-odia",
         name: "Typical Odia Menu",
-        image: "/placeholder.svg?height=400&width=600",
-        downloadUrl: "#",
+        image: "/menu/Wedding-menu/typical-odia/typical odia1.jpeg",
+        endingImage: "/menu/Wedding-menu/typical-odia/typical odia2.jpeg",
+        downloadUrl: "/menu/Wedding-menu/typical-odia/",
         whatsappMessage: "Hi, I want more info about the Wedding Typical Odia Menu.",
       },
     ]
@@ -105,7 +109,7 @@ const menuCategories: MenuCategory[] = [
         name: "Gold Package",
         image: "/menu/birthday/gold-menu/gold-menu.jpeg",
         endingImage: "/menu/birthday/gold-menu/gold-menu1.jpeg",
-        downloadUrl: "/menu/birthday/gold-menu/gold-menu.jpeg",
+        downloadUrl: "/menu/birthday/gold-menu/",
         whatsappMessage: "Hi, I want more info about the Birthday Gold Package.",
       },
       {
@@ -113,14 +117,14 @@ const menuCategories: MenuCategory[] = [
         name: "Platinum Package",
         image: "/menu/birthday/platinum-menu/platinum-menu1.jpeg",
         endingImage: "/menu/birthday/platinum-menu/platinum-menu2.jpeg",
-        downloadUrl: "/menu/birthday/platinum-menu/platinum-menu1.jpeg",
+        downloadUrl: "/menu/birthday/platinum-menu/",
         whatsappMessage: "Hi, I want more info about the Birthday Platinum Package.",
       },
       {
         id: "birthday-silver",
         name: "Silver Package",
         image: "/menu/birthday/silver-menu/silver-menu.jpeg",
-        downloadUrl: "/menu/birthday/silver-menu/silver-menu.jpeg",
+        downloadUrl: "/menu/birthday/silver-menu/",
         whatsappMessage: "Hi, I want more info about the Birthday Silver Package.",
       },
       {
@@ -128,28 +132,38 @@ const menuCategories: MenuCategory[] = [
         name: "Aura Anna",
         image: "/menu/birthday/aura-anna/aura-anna1.jpeg",
         endingImage: "/menu/birthday/aura-anna/aura-anna2.jpeg",
-        downloadUrl: "/menu/birthday/aura-anna/aura-anna1.jpeg",
+        downloadUrl: "/menu/birthday/aura-anna/",
         whatsappMessage: "Hi, I want more info about the Birthday Aura Anna menu.",
+      },
+      {
+        id: "birthday-small-party",
+        name: "Small Party Menu",
+        image: "/menu/birthday/small-party/samll-party.jpeg",
+        downloadUrl: "/menu/birthday/small-party/",
+        whatsappMessage: "Hi, I want more info about the Birthday Small Party Menu.",
       },
       {
         id: "birthday-without-onion-garlic",
         name: "Without Onion and Garlic",
-        image: "/placeholder.svg?height=400&width=600",
-        downloadUrl: "#",
+        image: "/menu/birthday/without-onion-garlic/without onion and garlic1.jpeg",
+        endingImage: "/menu/birthday/without-onion-garlic/without onion and garlic2.jpeg",
+        downloadUrl: "/menu/birthday/without-onion-garlic/",
         whatsappMessage: "Hi, I want more info about the Birthday Without Onion and Garlic menu.",
       },
       {
         id: "birthday-zaika-special",
         name: "Zaika Catering Special Menu",
-        image: "/placeholder.svg?height=400&width=600",
-        downloadUrl: "#",
+        image: "/menu/birthday/zaika-special-menu/zaika special1.jpeg",
+        endingImage: "/menu/birthday/zaika-special-menu/zaika special2.jpeg",
+        downloadUrl: "/menu/birthday/zaika-special-menu/",
         whatsappMessage: "Hi, I want more info about the Birthday Zaika Catering Special Menu.",
       },
       {
         id: "birthday-typical-odia",
         name: "Typical Odia Menu",
-        image: "/placeholder.svg?height=400&width=600",
-        downloadUrl: "#",
+        image: "/menu/birthday/typical-odia/typical odia1.jpeg",
+        endingImage: "/menu/birthday/typical-odia/typical odia2.jpeg",
+        downloadUrl: "/menu/birthday/typical-odia/",
         whatsappMessage: "Hi, I want more info about the Birthday Typical Odia Menu.",
       },
     ]
@@ -158,14 +172,46 @@ const menuCategories: MenuCategory[] = [
     id: "corporate-party",
     name: "Corporate Party",
     description: "Professional catering for corporate events and meetings",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "/menu/corporate/small-party/samll-party.jpeg",
     services: [
       {
         id: "corporate-small-party",
         name: "Small Party Menu",
-        image: "/placeholder.svg?height=400&width=600",
-        downloadUrl: "#",
+        image: "/menu/corporate/small-party/samll-party.jpeg",
+        downloadUrl: "/menu/corporate/small-party/",
         whatsappMessage: "Hi, I want more info about the Corporate Small Party Menu.",
+      },
+      {
+        id: "corporate-aura-anna",
+        name: "Aura Anna",
+        image: "/menu/corporate/aura-anna/aura-anna1.jpeg",
+        endingImage: "/menu/corporate/aura-anna/aura-anna2.jpeg",
+        downloadUrl: "/menu/corporate/aura-anna/",
+        whatsappMessage: "Hi, I want more info about the Corporate Aura Anna menu.",
+      },
+      {
+        id: "corporate-without-onion-garlic",
+        name: "Without Onion and Garlic",
+        image: "/menu/corporate/without-onion-garlic/without onion and garlic1.jpeg",
+        endingImage: "/menu/corporate/without-onion-garlic/without onion and garlic2.jpeg",
+        downloadUrl: "/menu/corporate/without-onion-garlic/",
+        whatsappMessage: "Hi, I want more info about the Corporate Without Onion and Garlic menu.",
+      },
+      {
+        id: "corporate-zaika-special",
+        name: "Zaika Catering Special Menu",
+        image: "/menu/corporate/zaika-special-menu/zaika special1.jpeg",
+        endingImage: "/menu/corporate/zaika-special-menu/zaika special2.jpeg",
+        downloadUrl: "/menu/corporate/zaika-special-menu/",
+        whatsappMessage: "Hi, I want more info about the Corporate Zaika Catering Special Menu.",
+      },
+      {
+        id: "corporate-typical-odia",
+        name: "Typical Odia Menu",
+        image: "/menu/corporate/typical-odia/typical odia1.jpeg",
+        endingImage: "/menu/corporate/typical-odia/typical odia2.jpeg",
+        downloadUrl: "/menu/corporate/typical-odia/",
+        whatsappMessage: "Hi, I want more info about the Corporate Typical Odia Menu.",
       },
     ]
   },
@@ -173,61 +219,87 @@ const menuCategories: MenuCategory[] = [
     id: "family-events",
     name: "Family Events",
     description: "Perfect catering for family gatherings and celebrations",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "/menu/family/small-party/samll-party.jpeg",
     services: [
       {
         id: "family-small-party",
         name: "Small Party Menu",
-        image: "/placeholder.svg?height=400&width=600",
-        downloadUrl: "#",
+        image: "/menu/family/small-party/samll-party.jpeg",
+        downloadUrl: "/menu/family/small-party/",
         whatsappMessage: "Hi, I want more info about the Family Events Small Party Menu.",
       },
       {
-        id: "aura-aunna",
-        name: "Aura Aunna",
-        image: "/placeholder.svg?height=400&width=600",
-        downloadUrl: "#",
-        whatsappMessage: "Hi, I want more info about the Aura Aunna menu.",
-      },
-    ]
-  },
-  {
-    id: "special-holiday-event",
-    name: "Special Holiday Event",
-    description: "Festive catering for special occasions and holidays",
-    image: "/placeholder.svg?height=400&width=600",
-    services: [
-      {
-        id: "holiday-small-party",
-        name: "Small Party Menu",
-        image: "/placeholder.svg?height=400&width=600",
-        downloadUrl: "#",
-        whatsappMessage: "Hi, I want more info about the Special Holiday Small Party Menu.",
+        id: "family-aura-anna",
+        name: "Aura Anna",
+        image: "/menu/family/aura-anna/aura-anna1.jpeg",
+        endingImage: "/menu/family/aura-anna/aura-anna2.jpeg",
+        downloadUrl: "/menu/family/aura-anna/",
+        whatsappMessage: "Hi, I want more info about the Family Events Aura Anna menu.",
       },
       {
-        id: "without-onion-garlic",
+        id: "family-without-onion-garlic",
         name: "Without Onion and Garlic",
-        image: "/placeholder.svg?height=400&width=600",
-        downloadUrl: "#",
-        whatsappMessage: "Hi, I want more info about the Without Onion and Garlic menu.",
+        image: "/menu/family/without-onion-garlic/without onion and garlic1.jpeg",
+        endingImage: "/menu/family/without-onion-garlic/without onion and garlic2.jpeg",
+        downloadUrl: "/menu/family/without-onion-garlic/",
+        whatsappMessage: "Hi, I want more info about the Family Events Without Onion and Garlic menu.",
       },
       {
-        id: "typical-odia",
+        id: "family-zaika-special",
+        name: "Zaika Catering Special Menu",
+        image: "/menu/family/zaika-special-menu/zaika special1.jpeg",
+        endingImage: "/menu/family/zaika-special-menu/zaika special2.jpeg",
+        downloadUrl: "/menu/family/zaika-special-menu/",
+        whatsappMessage: "Hi, I want more info about the Family Events Zaika Catering Special Menu.",
+      },
+      {
+        id: "family-typical-odia",
         name: "Typical Odia Menu",
-        image: "/placeholder.svg?height=400&width=600",
-        downloadUrl: "#",
-        whatsappMessage: "Hi, I want more info about the Typical Odia Menu.",
+        image: "/menu/family/typical-odia/typical odia1.jpeg",
+        endingImage: "/menu/family/typical-odia/typical odia2.jpeg",
+        downloadUrl: "/menu/family/typical-odia/",
+        whatsappMessage: "Hi, I want more info about the Family Events Typical Odia Menu.",
       },
     ]
   },
 ]
 
 export default function MenuPage() {
+  const [menuCategories, setMenuCategories] = useState<MenuCategory[]>(defaultMenuCategories)
   const [selectedCategory, setSelectedCategory] = useState<MenuCategory | null>(null)
   const [selectedService, setSelectedService] = useState<ServiceType | null>(null)
   const [isCategoryDialogOpen, setIsCategoryDialogOpen] = useState(false)
   const [isServiceDialogOpen, setIsServiceDialogOpen] = useState(false)
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
+
+  // Load menu data from JSON files
+  useEffect(() => {
+    const loadMenuData = async () => {
+      try {
+        const [weddingData, birthdayData, corporateData, familyData] = await Promise.all([
+          fetch('/menu/Wedding-menu/wedding-menu-data.json').then(res => res.json()),
+          fetch('/menu/birthday/birthday-menu-data.json').then(res => res.json()),
+          fetch('/menu/corporate/corporate.json').then(res => res.json()),
+          fetch('/menu/family/family.json').then(res => res.json())
+        ])
+
+        const categories: MenuCategory[] = [
+          weddingData.wedding,
+          birthdayData.birthday,
+          corporateData.corporate,
+          familyData.family
+        ]
+
+        setMenuCategories(categories)
+      } catch (error) {
+        console.error('Error loading menu data:', error)
+        // Fallback to default data
+        setMenuCategories(defaultMenuCategories)
+      }
+    }
+
+    loadMenuData()
+  }, [])
 
   const handleCategoryClick = (category: MenuCategory) => {
     setSelectedCategory(category)

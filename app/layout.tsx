@@ -5,7 +5,7 @@ import './globals.css'
 import { ThemeProvider } from "@/components/theme-provider"
 import { Toaster } from "sonner"
 import { Analytics } from "@vercel/analytics/react"
-
+import { SpeedInsights } from "@vercel/speed-insights/next" 
 export const viewport = {
   width: 'device-width',
   initialScale: 1,
@@ -220,6 +220,7 @@ export default function RootLayout({
           {children}
           <Toaster />
           <Analytics />
+          <SpeedInsights />
         </ThemeProvider>
         
         {/* Google Analytics Script - Add your GA4 ID */}

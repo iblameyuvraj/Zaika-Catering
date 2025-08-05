@@ -1,0 +1,49 @@
+{
+  "corporate": {
+    "id": "corporate-party",
+    "name": "Corporate Party",
+    "description": "Professional catering for corporate events and meetings",
+    "image": "/menu/menu-front-pic/corporate.avif",
+    "services": [
+      {
+        "id": "corporate-small-party",
+        "name": "Small Party Menu",
+        "image": "/menu/corporate/small-party/samll-party.jpeg",
+        "downloadUrl": "/menu/corporate/small-party/",
+        "whatsappMessage": "Hi, I want more info about the Corporate Small Party Menu."
+      },
+      {
+        "id": "corporate-aura-anna",
+        "name": "Aura Anna",
+        "image": "/menu/corporate/aura-anna/aura-anna1.jpeg",
+        "endingImage": "/menu/corporate/aura-anna/aura-anna2.jpeg",
+        "downloadUrl": "/menu/corporate/aura-anna/",
+        "whatsappMessage": "Hi, I want more info about the Corporate Aura Anna menu."
+      },
+      {
+        "id": "corporate-without-onion-garlic",
+        "name": "Without Onion and Garlic",
+        "image": "/menu/corporate/without-onion-garlic/without onion and garlic1.jpeg",
+        "endingImage": "/menu/corporate/without-onion-garlic/without onion and garlic2.jpeg",
+        "downloadUrl": "/menu/corporate/without-onion-garlic/",
+        "whatsappMessage": "Hi, I want more info about the Corporate Without Onion and Garlic menu."
+      },
+      {
+        "id": "corporate-zaika-special",
+        "name": "Zaika Catering Special Menu",
+        "image": "/menu/corporate/zaika-special-menu/zaika special1.jpeg",
+        "endingImage": "/menu/corporate/zaika-special-menu/zaika special2.jpeg",
+        "downloadUrl": "/menu/corporate/zaika-special-menu/",
+        "whatsappMessage": "Hi, I want more info about the Corporate Zaika Catering Special Menu."
+      },
+      {
+        "id": "corporate-typical-odia",
+        "name": "Typical Odia Menu",
+        "image": "/menu/corporate/typical-odia/typical odia1.jpeg",
+        "endingImage": "/menu/corporate/typical-odia/typical odia2.jpeg",
+        "downloadUrl": "/menu/corporate/typical-odia/",
+        "whatsappMessage": "Hi, I want more info about the Corporate Typical Odia Menu."
+      }
+    ]
+  }
+}
